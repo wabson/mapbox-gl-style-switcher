@@ -1,5 +1,5 @@
 {
-  "name": "mapbox-gl-style-switcher",
+  "name": "@wabson/mapbox-gl-style-switcher",
   "version": "0.0.1",
   "description": "Mapbox-GL custom control to allow users to switch between different background styles",
   "main": "index.js",
@@ -8,7 +8,8 @@
     "watch": "eslint src demo && webpack --watch",
     "build": "eslint src demo && webpack",
     "build-docs": "cp dist/* docs/",
-    "start": "eslint src demo && webpack-dev-server --open"
+    "start": "eslint src demo && webpack-dev-server --open",
+    "prepublish": "npm run build"
   },
   "author": "Will Abson",
   "license": "ISC",

@@ -17,7 +17,7 @@ Using `<script>` tags
 
 Or ES6 import
 
-    import StyleSwitcherControl from mapbox-gl-gl-style-switcher
+    import StyleSwitcherControl from '@wabson/mapbox-gl-style-switcher';
 
 Then create a new instance of the control and add it to the map,
 ensuring the map has fully loaded first.
