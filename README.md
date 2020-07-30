@@ -3,11 +3,23 @@
 This project defines a custom Mapbox GL JS control, which allows
 switching between map styles on the fly.
 
-An example is provided in the `demo` folder.
+[View demo page](https://mapbox-gl-style-switcher.github.io/)
 
 ## Usage
 
-Simply create a new instance of the control and add it to the map,
+Include the library in your project
+
+    npm install @wabson/mapbox-gl-style-switcher
+
+Using `<script>` tags
+
+    <script src="node_modules/mapbox-gl-gl-style-switcher/dist/index.js" type="application/javascript"></script>
+
+Or ES6 import
+
+    import StyleSwitcherControl from mapbox-gl-gl-style-switcher
+
+Then create a new instance of the control and add it to the map,
 ensuring the map has fully loaded first.
 
 ```
@@ -24,4 +36,24 @@ var map = new mapboxgl.Map({
     zoom: 14
 });
 map.on('load', function() { map.addControl(new StyleSwitcherControl()); });
+```
+
+You can optionally specify the list of styles displayed by the control via
+the `styles` property, e.g. to use Outdoors rather than Streets
+
+```
+map.addControl(new StyleSwitcherControl({
+    styles: [
+        {
+            uri: 'mapbox://styles/mapbox/outdoors-v11',
+            title: 'Map',
+            className: 'style-streets'
+        },
+        {
+            uri: 'mapbox://styles/mapbox/satellite-v9',
+            title: 'Satellite',
+            className: 'style-satellite'
+        }
+    ]
+});
 ```
