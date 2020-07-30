@@ -7,7 +7,7 @@ class StyleSwitcherControl {
     constructor(options) {
         this.styles = (options | {}).styles || [
             {
-                uri: 'mapbox://styles/mapbox/satellite-v9',
+                uri: 'mapbox://styles/mapbox/satellite-streets-v11',
                 title: 'Satellite',
                 className: 'style-satellite'
             },
