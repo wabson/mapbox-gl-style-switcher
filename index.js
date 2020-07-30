@@ -1,1 +1,3 @@
-export * from './src';
+import StyleSwitcherControl from './src';
+
+export default StyleSwitcherControl;
