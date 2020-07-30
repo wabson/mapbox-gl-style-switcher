@@ -3,7 +3,7 @@
 This project defines a custom Mapbox GL JS control, which allows
 switching between map styles on the fly.
 
-[View demo page](https://mapbox-gl-style-switcher.github.io/)
+[View demo page](https://wabson.github.io/mapbox-gl-style-switcher/)
 
 ## Usage
 
