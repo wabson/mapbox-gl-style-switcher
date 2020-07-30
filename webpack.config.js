@@ -26,7 +26,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             // inject: false,
             // template: require('html-webpack-template'),
-            title: 'mapbox-gl-draw line distance custom mode',
+            title: 'Mapbox GL JS Draw Style Switcher',
             // bodyHtmlSnippet: '<div id="map"></div>',
         })
     ],
