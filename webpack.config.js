@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -10,7 +9,9 @@ module.exports = {
       'demo': './demo/index.js'
     },
     devServer: {
-        contentBase: './dist',
+        static: {
+            directory: path.join(__dirname, 'dist'),
+        }
     },
     module: {
         rules: [
@@ -21,7 +22,6 @@ module.exports = {
         ],
     },
     plugins: [
-        new CleanWebpackPlugin(),
         new MiniCssExtractPlugin(),
         new HtmlWebpackPlugin({
             // inject: false,
@@ -33,5 +33,6 @@ module.exports = {
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
+        clean: true
     },
 };
