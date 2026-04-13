@@ -1,6 +1,6 @@
 {
   "name": "@wabson/mapbox-gl-style-switcher",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Mapbox-GL custom control to allow users to switch between different background styles",
   "main": "dist/style-switcher.js",
   "types": "dist/index.d.ts",
