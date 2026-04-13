@@ -1,3 +1,4 @@
+.nvmrc
 .vscode/
 dist/
 node_modules/

@@ -1,0 +1,12 @@
+src/
+demo/
+docs/
+node_modules/
+.vscode/
+webpack.config.js
+tsconfig.json
+.eslintrc.js
+index.js
+dist/demo.bundle.js
+dist/main.css
+dist/index.html

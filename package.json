@@ -2,35 +2,39 @@
   "name": "@wabson/mapbox-gl-style-switcher",
   "version": "0.0.3",
   "description": "Mapbox-GL custom control to allow users to switch between different background styles",
-  "main": "index.js",
+  "main": "dist/style-switcher.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "eslint src demo && webpack --watch",
-    "build": "eslint src demo && webpack",
+    "watch": "eslint src demo && webpack --watch --config-name demo",
+    "build": "eslint src demo && webpack && tsc",
     "build-docs": "cp dist/* docs/",
-    "start": "eslint src demo && webpack-dev-server --open",
+    "start": "eslint src demo && webpack serve --config-name demo",
     "prepublish": "npm run build"
   },
   "author": "Will Abson",
   "license": "ISC",
-  "dependencies": {
-    "mapbox-gl": "^3.1.2"
+  "peerDependencies": {
+    "mapbox-gl": "^3.0.0"
   },
   "devDependencies": {
-    "@types/mapbox-gl": "^2.7.19",
-    "css-loader": "^6.7.3",
-    "eslint": "^8.56.0",
+    "@typescript-eslint/parser": "^8.58.1",
+    "css-loader": "^6.11.0",
+    "eslint": "^8.57.1",
     "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-promise": "^6.6.0",
     "file-loader": "^6.2.0",
-    "html-loader": "^5.0.0",
-    "html-webpack-plugin": "^5.6.0",
-    "mini-css-extract-plugin": "^2.7.2",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.6",
+    "mapbox-gl": "^3.21.0",
+    "mini-css-extract-plugin": "^2.10.2",
     "style-loader": "^3.3.1",
-    "webpack": "^5.90.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "ts-loader": "^9.5.7",
+    "typescript": "^6.0.2",
+    "webpack": "^5.106.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.3"
   }
 }

@@ -13,11 +13,12 @@ Include the library in your project
 
 Using `<script>` tags
 
-    <script src="node_modules/mapbox-gl-gl-style-switcher/dist/index.js" type="application/javascript"></script>
+    <script src="node_modules/@wabson/mapbox-gl-style-switcher/dist/style-switcher.js" type="application/javascript"></script>
 
-Or ES6 import
+Or ES6 / TypeScript import
 
     import StyleSwitcherControl from '@wabson/mapbox-gl-style-switcher';
+    import '@wabson/mapbox-gl-style-switcher/dist/style-switcher.css';
 
 Then create a new instance of the control and add it to the map,
 ensuring the map has fully loaded first.
@@ -57,3 +58,24 @@ map.addControl(new StyleSwitcherControl({
     ]
 });
 ```
+
+## Development
+
+Node 24 is required. If you use [nvm](https://github.com/nvm-sh/nvm), run `nvm use` in the project root to switch automatically.
+
+Install dependencies:
+
+    npm install
+
+Start the demo dev server (rebuilds on change):
+
+    npm start
+
+Build the library and generate type declarations:
+
+    npm run build
+
+Output goes to `dist/`:
+- `style-switcher.js` — UMD bundle (mapbox-gl is a peer dependency, not bundled)
+- `style-switcher.css` — extracted styles
+- `index.d.ts` — TypeScript declarations
